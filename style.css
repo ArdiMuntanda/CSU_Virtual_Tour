@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#pano {
+  height: 100%;
+  width: 100%;
+}
+#starting_panel {
+    position: absolute; 
+    height: 100vh;
+    width: 100vw;
+    top: 0; 
+    left: 0; 
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .6);
+    color: white; 
+    display: grid;
+    place-items: center;
+}
+.starting_section {
+    width: 65vw;
+    text-align: center;
+}
+.starting_section p {
+    width: 75%;
+    margin: auto; 
+}
+.title.main {
+    font-size: 52px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.button {
+    color: white; 
+    font-size: 17px;
+    padding: 7px 21px; 
+    border: none;
+    margin: 20px; 
+    cursor: pointer; 
+    transition: .4s ease-in; 
+}
+.button.orange_line {
+    color: orangered; 
+    border: 2px solid orangered; 
+    background-color: transparent;
+}
+.button.orange {
+    font-weight: bold;
+    background-color: orangered;
+}
+.button.orange:hover {
+    box-shadow: 0px 0px 3px black;
+    
+}
+.button.link {
+    color: darkblue; 
+    background-color: transparent;
+    opacity: 0.6; 
+}
+.button.link:hover {
+    opacity: 1;
+}
+/* Guide style  */
+#guide_section {
+    display: none;
+    background-color: white;
+    color: black; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px;
+    position: absolute; 
+    bottom: 35px; 
+    left: 15px; 
+    z-index: 50;
+    width: 50%;
+    padding: 15px 15px 15px 40px ; 
+}
+#guide_section article{
+    display: hidden
+}
+.csu_guide_top {
+    display: flex;
+    align-items: center;
+}
+#csu_logo {
+    background-color: orangered;
+    color: white; 
+    font-family: serif;
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    margin: 10px; 
+}
