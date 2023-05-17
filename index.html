@@ -45,7 +45,7 @@
     <script defer>
       (function() {
         var script = document.createElement('script');
-        script.src = '<%= process.env.API_KEY %>'; // Retrieve the secret value
+        script.src = process.env.API_KEY; // Retrieve the secret value
         document.head.appendChild(script);
       })();
     </script>
