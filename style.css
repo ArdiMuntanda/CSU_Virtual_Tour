@@ -41,12 +41,19 @@ body {
     border: none;
     margin: 20px; 
     cursor: pointer; 
-    transition: .4s ease-in; 
+    transition: .3s ease-in; 
 }
 .button.orange_line {
     color: orangered; 
     border: 2px solid orangered; 
     background-color: transparent;
+}
+.button.orange_line:hover {
+    background-color: orangered;
+    color: white;
+}
+.button.orange_line.left {
+    border-radius: 25px 0px 0px 25px;
 }
 .button.orange {
     font-weight: bold;
@@ -64,26 +71,41 @@ body {
 .button.link:hover {
     opacity: 1;
 }
+
 /* Guide style  */
 #guide_section {
-    display: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, .9);
     color: black; 
-    border-radius: 10px;
     box-shadow: 0px 0px 8px;
     position: absolute; 
-    bottom: 35px; 
+    top: 35px; 
     left: 15px; 
     z-index: 50;
-    width: 50%;
-    padding: 15px 15px 15px 40px ; 
+    padding: 0px 20px 10px 20px;
+    border-radius: 25px;
+    max-width: 45%;
 }
-#guide_section article{
-    display: hidden
+#guide_section article, #guide_section h2 {
+    display: hidden;
+}
+section.open {
+    width: 50%;
+    padding: 15px 15px 15px 40px !important; 
+    border-radius: 10px;
+
 }
 .csu_guide_top {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+.csu_guide_top section {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+#guide-section .open .csu_guide_top {
+    margin-top: 20px;
 }
 #csu_logo {
     background-color: orangered;
@@ -95,5 +117,39 @@ body {
     display: grid;
     place-items: center;
     font-size: 11px;
-    margin: 10px; 
+    margin-right: 10px;
+}
+.gm-iv-address {
+    display: none; 
+}
+/* Guide navigator */
+.guide_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.img_btn {
+    height: 20px; 
+    padding: 3px; 
+    border: 2px solid orangered;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0px 15px;
+    transition: .3s;  
+}
+.img_btn:hover {
+    height: 23px;
+}
+img.min_btn {
+    /* background-color: midnightblue; */
+    cursor: pointer; 
+    height: 18px; 
+    margin-right: 0px 25px; 
+    transition: .3s; 
+    margin-top: 10px;
+    margin-left: 15px;
+}
+img.min_btn:hover {
+    height: 20px; 
 }

@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="starting_panel" >
-        <section class="starting_section">
+        <section class="starting_section" value="1">
 
             <h1 class="title main">Welcome To Cyprus Science University</h1>
             <p class="starting_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates provident quibusdam explicabo at nesciunt tempora ratione eaque accusantium porro dolor cum voluptatem repudiandae incidunt, reprehenderit harum obcaecati sit ad laboriosam!</p>
@@ -19,18 +19,27 @@
 
     <section id="guide_section">
         <header class="csu_guide_top">
-            <div id="csu_logo">CSU</div>
-            <div id="guide_label">Cyprus Science University</div>
+            <section>
+              <div id="csu_logo">CSU</div>
+              <div id="guide_label">Cyprus Science University</div>
+            </section>
+            <img src="/images/minimized.png" class="min_btn">
         </header>
+        <nav class="guide_nav">
+            <img src="/images/left.png"  id="prev" value="" class="img_btn">
+            <h2 class="guide_title"></h2>
+            <img src="/images/right.png" id="next" value="" class="img_btn">
+        </nav>
         <article>
 
-            <h2>The presise place where the user is</h2>
     
             <p class="guide_explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi, temporibus culpa soluta ea vero recusandae. Quisquam autem asperiores voluptate mollitia, perferendis ipsa minus, quaerat repudiandae itaque facilis unde aliquam?</p>
     
-            <button class="button orange_line">Next place</button> 
-            <button class="button link"> Close the guide</button>
+            <!-- <button class="button orange_line" style="margin-left: 0;" id="prev" value="">Previous</button> 
+            <button class="button orange_line " id="next" value="">Next </button>  -->
+            
         </article>
+        
     </section>
     <div id="pano"></div>
 
