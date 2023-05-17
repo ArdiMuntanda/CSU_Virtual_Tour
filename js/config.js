@@ -1,2 +1,2 @@
 // sensitive informations 
-var apiKey = secrets.API_KEY;
+var apiKey = process.env.API_KEY;
