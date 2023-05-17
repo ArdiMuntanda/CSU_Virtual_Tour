@@ -42,9 +42,12 @@
     </section>
     <div id="pano"></div>
     <script src="./js/config.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=KEY&callback=initialize&v=weekly"
-      defer
-    ></script>
+    <script defer>
+      (function() {
+        var script = document.createElement('script');
+        script.src = '<%= process.env.API_KEY %>'; // Retrieve the secret value
+        document.head.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
