@@ -43,11 +43,11 @@
     <div id="pano"></div>
     <script src="./js/config.js"></script>
     <script defer>
-      (function() {
-        var script = document.createElement('script');
-        script.src = process.env.API_KEY; // Retrieve the secret value
-        document.head.appendChild(script);
-      })();
+      var script = document.createElement('script');
+      script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initialize&v=weekly";
+      script.async= true; 
+      script.defer= true; 
+      document.head.appendChild(script);
     </script>
   </body>
 </html>
