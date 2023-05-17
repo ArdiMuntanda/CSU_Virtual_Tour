@@ -1,5 +1,4 @@
 export function guide(csu, location) {
-    console.log(location);
     $(document).ready(()=>{
         let overlayState = $("#starting_panel").attr("value");
         if (overlayState == "0") {
