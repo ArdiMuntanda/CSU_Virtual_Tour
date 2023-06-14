@@ -1,3 +1,4 @@
+@import "./css/responsive.css";
 html, body {
   height: 100%;
   margin: 0;
@@ -46,6 +47,7 @@ html, body {
     color: orangered; 
     border: 2px solid orangered; 
     background-color: transparent;
+     
 }
 .button.orange_line:hover {
     background-color: orangered;
@@ -55,12 +57,13 @@ html, body {
     border-radius: 25px 0px 0px 25px;
 }
 .button.orange {
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: orangered;
+    border-radius: 15px;
+    box-shadow: 0px 0px 4px black;
 }
 .button.orange:hover {
-    box-shadow: 0px 0px 3px black;
-    
+    box-shadow: none;
 }
 .button.link {
     color: darkblue; 
@@ -77,15 +80,18 @@ html, body {
     color: black; 
     box-shadow: 0px 0px 8px;
     position: absolute; 
-    top: 35px; 
+    top: 15px; 
     left: 15px; 
     z-index: 50;
-    padding: 0px 20px 10px 20px;
-    border-radius: 25px;
-    max-width: 45%;
+    padding: 0px 10px 10px 10px;
+    border-radius: 13px;
+    max-width: 35%;
 }
 #guide_section article, #guide_section h2 {
     display: hidden;
+}
+.guide_nav .guide_title {
+    margin: 8px 5px;
 }
 section.open {
     width: 50%;
@@ -106,20 +112,27 @@ section.open {
 #guide-section .open .csu_guide_top {
     margin-top: 20px;
 }
+#guide_label {
+    font-size: 16px; 
+}
 #csu_logo {
     background-color: orangered;
     color: white; 
     font-family: serif;
-    width: 30px; 
-    height: 30px; 
+    width: 25px; 
+    height: 25px; 
     border-radius: 50%; 
     display: grid;
     place-items: center;
-    font-size: 11px;
+    font-size: 10px;
     margin-right: 10px;
 }
 .gm-iv-address {
     display: none; 
+}
+#guide_section article p {
+    text-align: left;
+    padding: 3px; 
 }
 /* Guide navigator */
 .guide_nav {
@@ -129,7 +142,7 @@ section.open {
     margin-top: 5px;
 }
 .img_btn {
-    height: 20px; 
+    height: 16px; 
     padding: 3px; 
     border: 2px solid orangered;
     border-radius: 4px;
@@ -143,12 +156,293 @@ section.open {
 img.min_btn {
     /* background-color: midnightblue; */
     cursor: pointer; 
-    height: 18px; 
+    height: 16px; 
     margin-right: 0px 25px; 
     transition: .3s; 
     margin-top: 10px;
     margin-left: 15px;
 }
+
 img.min_btn:hover {
-    height: 20px; 
+    height: 18px; 
+}
+.mobile_places {
+    display: none; 
+}
+.locations-panel {
+    background-color: rgb(255, 255, 255, .9);
+    padding: 0px 5px; 
+    position: absolute; 
+    bottom: 28px;
+    left: 15px;
+    z-index: 50;
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center;
+    justify-content: left;
+    height: 13%;
+    overflow-x: auto;
+    box-shadow: 0px 0px 8px;
+}
+.location-box-section {
+    width: 95%;
+    height: 95%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: #D9D9D9;
+    position: relative;
+    transition: .4s;
+    display: none;
+    margin: 0px 15px; 
+}
+.locations-panel header {
+    background: url("./images/map.png") center center no-repeat; 
+    background-size: cover;
+    height: 88%;
+    width: 60px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border-radius: 8px;
+}
+.locations-panel header div {
+    text-align: center;
+    font-size: 14px;
+    color: white; 
+    width: 100%; 
+    padding: 5px 8px;
+    border-radius: 0px 0px 8px 8px;
+    background: linear-gradient(transparent
+    , black);
+}
+.locations-panel article {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+.location-box {
+    text-align: center;
+    cursor: pointer;
+}
+.location-box h5{
+    margin: 0px;
+    font-size: 11px;
+    font-weight: normal;
+}
+.location-box figure {
+    display: grid;
+    place-items: center;
+    background-color: white;
+    border-radius: 8px;
+    margin: 4px 8px 2px 8px; 
+    height: 70%; 
+    width: 60px;
+    box-shadow: 0px 0px 3px black;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1.5px solid transparent;
+    transition: .3s;
+}
+.location-box figure:hover {
+    border-color: orangered;
+}
+.location-box.current  figure{
+    border-color: orangered;
+}
+
+.locations-panel:hover { 
+    animation: open_nav forwards .6s ease-in-out;
+}
+@keyframes open_nav {
+    0% {
+        width: auto;
+    }
+    5% {
+        width: 20%; 
+    }
+    100% {
+        width: 75%;
+        padding-right: 20px; 
+    }
+}
+.places_scroll {
+    display: none; 
+}
+.places_scroll img {
+    transition: .4s;
+    height: 22px; 
+}
+.places_scroll img:hover {
+    height: 24px; 
+}
+.places_scroll.left img {
+    transform: rotate(180deg);
+    margin: 5px; 
+    margin-left: 15px;
+}
+/* Hide some unwanted detail from streetview */
+.gm-fullscreen-control,
+.gm-tos,
+.gm-report-container,
+.gm360-container,
+.gm-svpc {
+  display: none !important;
+}
+.gm-bundled-control-bottom-right {
+    display: none !important;
+  }
+/* Left menu  */
+.left_menu {
+    position: absolute; 
+    right: 15px; 
+    top: 20px; 
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left_menu_items {
+    margin: 0px 10px; 
+    padding: 5px 15px; 
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 25px;
+    box-shadow: 0px 0px 3px black;
+    transition: .4s; 
+    display: flex; 
+    align-items: center;
+}
+.left_menu_items img {
+    height: 16px; 
+    margin: 0px 5px 0px 0px;
+    opacity: .8;  
+}
+.left_menu_items a {
+    text-decoration: none;
+    color: black; 
+}
+.left_menu_items:hover {
+    opacity: .8; 
+}
+
+@media screen and (max-width: 850px) {
+    .starting_section {
+        width: 90%;
+    }
+    .title.main {
+        font-size: 38px;
+    }
+    .left_menu {
+        display: none !important; 
+    }
+    #guide_section {
+        margin-left: 50%; 
+        transform: translateX(-50%);
+        width: 95%; 
+        max-width: 90%;
+        left: 0px; 
+        padding: 0px;
+        overflow-y: hidden;
+    }
+    .guide_explanation {
+        overflow-y: auto;
+        max-height: 20vh;
+    }
+    .csu_guide_top {
+        margin-left: 15px; 
+        margin-right: 15px; 
+    }
+    .guide_nav {
+        margin-bottom: 5px;
+    }
+    .locations-panel {
+        display: none; 
+    }
+    .mobile_places {
+        display: block; 
+        position: absolute;
+        bottom: 30px; 
+        left: 15px;
+        z-index: 50;
+        padding: 5px 10px;
+        border-radius: 8px;
+        background-color: rgb(255, 255, 255, .9);
+        box-shadow: 0px 0px 3px black;
+    }
+    .mobile_places.expanded {
+        left: 0;
+        margin-left: 50%;
+        transform: translate(-50%); 
+        width: 90%; 
+    }
+    .mobile_places.expanded header img {
+        transform: rotate(180deg);
+    }
+    .mobile_places header:hover img {
+        height: 11.5px;
+    } 
+    .mobile_places header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    .mobile_places header img {
+        height: 10px;
+        margin: 0px 15px;
+        margin-right: 0px; 
+        transition: .3s;
+    }
+    .place-box figure {
+        background-color: white;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        width: 75%;
+        height: 30%;
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        border: 2px solid transparent; 
+        transition: .4s;
+        cursor: pointer;
+        margin: auto;
+        box-shadow: 0px 0px 5px black;
+    }
+    .place-box h5 {
+        margin: 2px;
+        text-align: center;
+    }
+    .place-box {
+        margin: 3px 3px 8px 3px;
+        width: 25%;
+    }
+    .mobile_places article {
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: #D9D9D9;
+        overflow-y: auto;
+        padding: 5px 0px;
+        margin: 10px 0px;
+        display: none;
+    }
+    .mobile_places article.show {
+        display: flex;
+    }
+    .place-box:hover figure {
+        border-color: orangered;
+    }
+    .place-box.current  figure{
+        border-color: orangered;
+    }
+    .guide_explanation {
+        margin: 10px;
+    }
 }

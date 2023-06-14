@@ -4,18 +4,32 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./js/jQuery.js" ></script>
-    <script type="module" src="./js/index.js"></script>
+    <script src="./scripts/jQuery.js" ></script>
+    <script type="module" src="./scripts/index.js"></script>
   </head>
   <body>
     <div id="starting_panel" >
         <section class="starting_section" value="1">
             <h1 class="title main">Welcome To Cyprus Science University</h1>
-            <p class="starting_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates provident quibusdam explicabo at nesciunt tempora ratione eaque accusantium porro dolor cum voluptatem repudiandae incidunt, reprehenderit harum obcaecati sit ad laboriosam!</p>
-            <button class="button orange" id="start_btn">Visit the campus</button>
+            <p class="starting_description">Explore our campus and witness the vibrant world of scientific discovery. From laboratories to inspiring lecture halls, immerse yourself in our commitment to academic excellence. Discover the future of innovation as you navigate this captivating experience.</p>
+            <button class="button orange" id="start_btn">Start the Tour</button>
         </section>
     </div>
 
+    <header class="left_menu">
+      <div class="left_menu_items">
+        <img src="./images/web.png" alt="">
+        <a href="https://www.csu.edu.tr/tr/www-kius-csu-edu-tr/">CSU Website</a>
+      </div>
+      <div class="left_menu_items">
+        <img src="./images/apply.png" alt="">
+        <a href="https://apply.csu.edu.tr/">Apply to CSU</a>
+      </div>
+      <div class="left_menu_items">
+        <img src="./images/contact.png" alt="">
+        <a href="mailto:info@csu.edu.tr">Contact CSU</a>
+      </div>
+    </header>
     <section id="guide_section">
         <header class="csu_guide_top">
             <section>
@@ -26,7 +40,7 @@
         </header>
         <nav class="guide_nav">
             <img src="./images/left.png"  id="prev" value="" class="img_btn">
-            <h2 class="guide_title"></h2>
+            <h3 class="guide_title"></h3>
             <img src="./images/right.png" id="next" value="" class="img_btn">
         </nav>
         <article>
@@ -40,8 +54,34 @@
         </article>
         
     </section>
+    <section class="locations-panel">
+      <header>
+        <div>Places</div>
+      </header>
+
+      <nav class="places_scroll left">
+        <img src="./images/arrow.png" alt="">
+      </nav>
+      <section class="location-box-section">
+        <article>
+        </article>
+      </section>
+      <nav class="places_scroll right">
+        <img src="./images/arrow.png" >
+      </nav>
+    </section>
+    <nav class="mobile_places">
+      <header>
+        Places
+        <img src="./images/up.png" alt="">
+      </header>
+      <article>
+
+      </article>
+    </nav>
     <div id="pano"></div>
-    <script src="./js/config.js"></script>
+
+    <script src="./scripts/config.js"></script>
     <script defer>
       var script = document.createElement('script');
       script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initialize&v=weekly";
