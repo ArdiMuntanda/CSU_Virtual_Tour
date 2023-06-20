@@ -326,7 +326,36 @@ img.min_btn:hover {
 .left_menu_items:hover {
     opacity: .8; 
 }
-
+/* audio buttons style */
+.right_btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 50;
+}
+.right_btn div {
+    height: 50px; 
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, .9);
+    margin: 15px 0px; 
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 8px black;
+    cursor: pointer;
+    transition: .3s;
+}
+.right_btn div:hover {
+    opacity: .6;
+}
+.music_btn img {
+    height: 18px;
+    opacity: .8;
+}
+.guide_btn img {
+    height: 20px;
+    opacity: .8;
+}
 @media screen and (max-width: 850px) {
     .starting_section {
         width: 90%;
@@ -365,7 +394,7 @@ img.min_btn:hover {
         position: absolute;
         bottom: 30px; 
         left: 15px;
-        z-index: 50;
+        z-index: 52;
         padding: 5px 10px;
         border-radius: 8px;
         background-color: rgb(255, 255, 255, .9);

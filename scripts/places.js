@@ -31,6 +31,10 @@ class Place {
         this.heading = pov.heading;
         this.pitch = pov.pitch;
     }
+
+    setAudio(audio) {
+        this.audio = audio;
+    }
 }
 const places= [
     {lat: 35.324585468807385, lng: 33.34469145172765},//University entrance
@@ -147,6 +151,36 @@ const titleList = [
     "CSU Parking" 
 ]; 
 
+const audioList = [
+    "./audios/guide audio 1.mp4", 
+    "./audios/guide audio 2.mp4", 
+    "./audios/guide audio 3.mp4", 
+    "./audios/guide audio 4.mp4", 
+    "./audios/guide audio 5.mp4", 
+    "./audios/guide audio 6.mp4", 
+    "./audios/guide audio 7.mp4", 
+    "./audios/guide audio 8.mp4", 
+    "./audios/guide audio 9.mp4", 
+    "./audios/guide audio 10.mp4", 
+    "./audios/guide audio 11.mp4", 
+    "./audios/guide audio 12.mp4", 
+    "./audios/guide audio 13.mp4", 
+    "./audios/guide audio 14.mp4", 
+    "./audios/guide audio 15.mp4", 
+    "./audios/guide audio 16.mp4", 
+    "./audios/guide audio 17.mp4", 
+    "./audios/guide audio 18.mp4", 
+    "./audios/guide audio 19.mp4", 
+    "./audios/guide audio 20.mp4", 
+    "./audios/guide audio 22.mp4", 
+    "./audios/guide audio 23.mp4", 
+    "./audios/guide audio 24.mp4", 
+    "./audios/guide audio 25.mp4", 
+    "./audios/guide audio 27.mp4", 
+    "./audios/guide audio 28.mp4", 
+    "./audios/guide audio 29.mp4", 
+]; 
+
 const pov = [
     {heading: 55.85948442988762, pitch: 3.070489772500892}, 
     {heading: 67.8024390130424, pitch: 5.076137143889497},
@@ -183,6 +217,7 @@ places.forEach((place) => {
     allPlaces[placeId].setTile(titleList[placeId]); 
     allPlaces[placeId].setDescription(descriptionList[placeId]);
     allPlaces[placeId].setPov(pov[placeId]);
+    allPlaces[placeId].setAudio(audioList[placeId]);
     
     placeId++; 
 }); 

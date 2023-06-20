@@ -1,6 +1,7 @@
 import { csu } from "./places.js";
 import  {initialize, changePosition} from "./streetView.js";
 import { truncate } from "./guide.js";
+import { playGuide, playMusic, stopGuide, stopMusic } from "./audios.js";
 window.initialize = initialize;
 window.currentPlaceId = 0; 
 
@@ -20,6 +21,8 @@ $(document).ready(() => {
       } 
       $("#starting_panel").attr("value", "0"); 
     }); 
+    playMusic();
+    playGuide("./audios/guide audio 1.mp4");
   }); 
 
   $("#next").on("click", () => {
@@ -109,4 +112,28 @@ $(document).ready(() => {
       $('.location-box-section').hide();
   })
   
+  // audio Controles
+  
+  $('.music_btn').click(() => {
+    $('.music_btn').toggleClass('muted');
+    if ($('.music_btn').hasClass('muted')) {
+      stopMusic();
+      $('.music_btn img').attr('src', '/images/mute.png')
+    } else {
+      playMusic();
+      $('.music_btn img').attr('src', '/images/unmute.png')
+    }
+  })
+
+  $('.guide_btn').click(() => {
+    $('.guide_btn').toggleClass('muted');
+    if ($('.guide_btn').hasClass('muted')) {
+      stopGuide();
+      $('.guide_btn img').attr('src', '/images/muted guide.png')
+    } else {
+      playGuide(csu[window.currentPlaceId].audio);
+      $('.guide_btn img').attr('src', '/images/unmuted guide.png')
+    }
+  })
+
 })

@@ -1,3 +1,4 @@
+import { playGuide } from "../scripts/audios.js";
 export function guide(csu, location) {
     const check = findCoordinateIndex(csu, location.lng, location.lat);
      
@@ -40,6 +41,10 @@ export function guide(csu, location) {
                                 element.classList.add('current');
                             }
                         });
+                    }
+
+                    if (!$('.guide_btn').hasClass('muted')) {
+                        playGuide(csu[check].audio); 
                     }
             }
 
