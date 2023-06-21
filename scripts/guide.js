@@ -74,7 +74,7 @@ function findCoordinateIndex(array, longitude, latitude) {
       const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       const distance = EARTH_RADIUS * c;
   
-      if (distance <= 3) {
+      if (distance <= 2) {
         return i; // Return the index if within 5 meters
       }
     }

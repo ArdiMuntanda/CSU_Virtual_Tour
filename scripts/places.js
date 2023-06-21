@@ -156,6 +156,7 @@ const audioList = [
     "./audios/guide audio 2.mp4", 
     "./audios/guide audio 3.mp4", 
     "./audios/guide audio 4.mp4", 
+    "./audios/guide audio 4.2.mp4", 
     "./audios/guide audio 5.mp4", 
     "./audios/guide audio 6.mp4", 
     "./audios/guide audio 7.mp4", 
@@ -172,13 +173,12 @@ const audioList = [
     "./audios/guide audio 18.mp4", 
     "./audios/guide audio 19.mp4", 
     "./audios/guide audio 20.mp4", 
+    "./audios/guide audio 21.mp4", 
     "./audios/guide audio 22.mp4", 
     "./audios/guide audio 23.mp4", 
     "./audios/guide audio 24.mp4", 
     "./audios/guide audio 25.mp4", 
-    "./audios/guide audio 27.mp4", 
-    "./audios/guide audio 28.mp4", 
-    "./audios/guide audio 29.mp4", 
+    "./audios/guide audio 26.mp4", 
 ]; 
 
 const pov = [
