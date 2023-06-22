@@ -356,6 +356,28 @@ img.min_btn:hover {
     height: 20px;
     opacity: .8;
 }
+/* credits */
+.button.credits {
+    position: absolute;
+    bottom: 15px;
+    width: 50%;
+    margin: auto;
+    opacity: .7;
+    /* margin-left: 50%; */
+    transform: translateX(-50%);
+    background-color: transparent;
+    transition: .4s;
+}
+.button.credits:hover {
+    opacity: 1;
+}
+.links {
+    color: white;
+    transition: .4s
+}
+.links:hover {
+    color: orangered;
+}
 @media screen and (max-width: 850px) {
     .starting_section {
         width: 90%;
