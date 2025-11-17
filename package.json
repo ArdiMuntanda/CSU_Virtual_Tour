@@ -1,0 +1,18 @@
+{
+  "name": "csu-virtual-tour",
+  "version": "1.0.0",
+  "description": "Cyprus Science University Virtual Tour",
+  "main": "scripts/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/load-env.js && http-server",
+    "build": "echo 'Build script here'",
+    "start": "http-server"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}

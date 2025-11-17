@@ -2,6 +2,8 @@ import { csu } from "./places.js";
 import  {initialize, changePosition} from "./streetView.js";
 import { truncate } from "./guide.js";
 import { playGuide, playMusic, stopGuide, stopMusic } from "./audios.js";
+import { vrController } from "./vr.js";
+
 window.initialize = initialize;
 window.currentPlaceId = 0; 
 
@@ -11,6 +13,12 @@ $(document).ready(() => {
   $(".guide_title").text(csu[window.currentPlaceId].title); 
   $(".guide_title").attr("title", csu[window.currentPlaceId].title);
   $("#guide_section article").hide();
+  
+  // Initialize VR controller after panorama is ready
+  const vrButton = document.getElementById('vr-button');
+  if (vrButton) {
+    vrController.init(vrButton);
+  }
   
   $("#start_btn").on("click", function () {
     

@@ -56,13 +56,13 @@ html, body {
 .button.orange_line.left {
     border-radius: 25px 0px 0px 25px;
 }
-.button.orange {
+.button.primary {
     /* font-weight: bold; */
-    background-color: orangered;
+    background-color: #69C159;
     border-radius: 15px;
     box-shadow: 0px 0px 4px black;
 }
-.button.orange:hover {
+.button.primary:hover {
     box-shadow: none;
 }
 .button.link {
@@ -333,7 +333,7 @@ img.min_btn:hover {
     right: 15px;
     z-index: 50;
 }
-.right_btn div {
+.right_btn div, .right_btn button {
     height: 50px; 
     width: 50px;
     border-radius: 50%;

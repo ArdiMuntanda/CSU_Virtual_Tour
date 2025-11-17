@@ -1,0 +1,43 @@
+/**
+ * VR Styles for Cardboard mode
+ * Handles UI visibility during VR mode
+ */
+
+/* VR Button Styling */
+.vr-button {
+  background-color: #71D3FD !important;
+  color: white;
+  
+}
+
+.vr-button:hover {
+  transform: translateY(-2px);
+}
+
+.vr-button:active {
+  transform: translateY(0);
+}
+
+.vr-button.vr-active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+/* Hide other UI elements during VR */
+body.vr-active .left_menu,
+body.vr-active .guide_section,
+body.vr-active .locations-panel,
+body.vr-active .mobile_places,
+body.vr-active .right_btn,
+body.vr-active #starting_panel {
+  display: none !important;
+}
+
+/* Keep VR button visible and positioned in fullscreen */
+body.vr-active .vr-button {
+  display: flex !important;
+  z-index: 9999;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}

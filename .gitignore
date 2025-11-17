@@ -1,2 +1,9 @@
 config.js
 js/config.js
+
+# Environment variables - CRITICAL - Do not commit!
+.env
+.env.local
+.env.*.local
+.env.production.local
+scripts/env-config.js

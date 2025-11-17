@@ -5,6 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/vr.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -17,18 +18,20 @@
     <script src="./scripts/jQuery.js" ></script>
     <script type="module" src="./scripts/index.js"></script>
     <script src="./scripts/credits.js"></script>
+    
   </head>
   <body>
     <div id="starting_panel" >
         <section class="starting_section" value="1">
-            <h1 class="title main">Welcome To Cyprus Science University</h1>
-            <p class="starting_description">Explore our campus and witness the vibrant world of scientific discovery. From laboratories to inspiring lecture halls, immerse yourself in our commitment to academic excellence. Discover the future of innovation as you navigate this captivating experience.</p>
-            <button class="button orange" id="start_btn">Start the Tour</button><br><br>
-            <button class="button credits">By the CSU Software Development Team</button>
+            <img src="./images/Logo Mobembo H.png" alt="Logo Mobembo" height="13%" style="margin: 8px">
+            <!-- <h1 class="title main">Welcome To Cyprus Science University</h1> -->
+            <p class="starting_description">Experimenter l'exploration immersive</p>
+            <button class="button primary" id="start_btn">Explorer Maintenant</button><br><br>
+            <!-- <button class="button credits">By the CSU Software Development Team</button> -->
         </section>
     </div>
 
-    <header class="left_menu">
+    <!-- <header class="left_menu">
       <div class="left_menu_items">
         <img src="./images/web.png" alt="">
         <a href="https://www.csu.edu.tr/tr/www-kius-csu-edu-tr/">CSU Website</a>
@@ -41,8 +44,8 @@
         <img src="./images/contact.png" alt="">
         <a href="mailto:info@csu.edu.tr">Contact CSU</a>
       </div>
-    </header>
-    <section id="guide_section">
+    </header> -->
+    <!-- <section id="guide_section">
         <header class="csu_guide_top">
             <section>
               <div id="csu_logo">CSU</div>
@@ -59,14 +62,11 @@
 
     
             <p class="guide_explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi, temporibus culpa soluta ea vero recusandae. Quisquam autem asperiores voluptate mollitia, perferendis ipsa minus, quaerat repudiandae itaque facilis unde aliquam?</p>
-    
-            <!-- <button class="button orange_line" style="margin-left: 0;" id="prev" value="">Previous</button> 
-            <button class="button orange_line " id="next" value="">Next </button>  -->
             
         </article>
         
-    </section>
-    <section class="locations-panel">
+    </section> -->
+    <!-- <section class="locations-panel">
       <header>
         <div>Places</div>
       </header>
@@ -81,8 +81,8 @@
       <nav class="places_scroll right">
         <img src="./images/arrow.png" >
       </nav>
-    </section>
-    <nav class="mobile_places">
+    </section> -->
+    <!-- <nav class="mobile_places">
       <header>
         Places
         <img src="./images/up.png" alt="">
@@ -90,8 +90,9 @@
       <article>
 
       </article>
-    </nav>
+    </nav> -->
     <section class="right_btn">
+      <button id="vr-button" class="vr-button" title="Enter VR mode (Cardboard)">VR</button>
       <div class="guide_btn">
         <img src="/images/unmuted guide.png" alt="">
       </div>
@@ -99,15 +100,38 @@
         <img src="/images/unmute.png" alt="">
       </div>
     </section>
+    
     <div id="pano"></div>
+    
 
-    <script src="./scripts/config.js"></script>
+  <script src="./scripts/env-config.js"></script>
+  <script src="./scripts/config.js"></script>
     <script defer>
-      var script = document.createElement('script');
-      script.src = "https://maps.googleapis.com/maps/api/js?key="+apiKey+"&callback=initialize&v=weekly";
-      script.async= true; 
-      script.defer= true; 
-      document.head.appendChild(script);
+      // Load Google Maps JS dynamically and call initialize after it loads.
+      // `config.js` exposes `window.apiKey`.
+      (function () {
+        var key = (typeof window !== 'undefined') ? window.apiKey : null;
+        if (!key) {
+          console.error('Google Maps API key is not set (window.apiKey is falsy). Map will not load.');
+          return;
+        }
+
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&v=weekly';
+        script.async = true;
+        script.defer = true;
+        script.onload = function () {
+          if (typeof window.initialize === 'function') {
+            try { window.initialize(); } catch (e) { console.error('Error calling initialize():', e); }
+          } else {
+            console.warn('Google Maps API loaded but window.initialize is not defined yet.');
+          }
+        };
+        script.onerror = function (err) {
+          console.error('Failed to load Google Maps script:', err);
+        };
+        document.head.appendChild(script);
+      })();
     </script>
     
   </body>
