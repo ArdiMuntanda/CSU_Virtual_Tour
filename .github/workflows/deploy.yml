@@ -37,6 +37,7 @@ jobs:
           cat > public/scripts/env-config.js << EOF
           window.__GOOGLE_MAPS_API_KEY__ = "${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}";
           window.__APP_CONFIG__ = { VITE_GOOGLE_MAPS_API_KEY: "${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}" };
+          window.apiKey = window.__GOOGLE_MAPS_API_KEY__;
           EOF
           cp scripts/config.js public/scripts/config.js
 

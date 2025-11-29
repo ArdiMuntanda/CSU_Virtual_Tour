@@ -2,3 +2,4 @@
 // Do not commit sensitive values. .env is git-ignored.
 window.__GOOGLE_MAPS_API_KEY__ = "AIzaSyDdUp_37M_ivzEpHtz3wzkg1nb7Jo8Z2GU";
 window.__APP_CONFIG__ = { VITE_GOOGLE_MAPS_API_KEY: "AIzaSyDdUp_37M_ivzEpHtz3wzkg1nb7Jo8Z2GU" };
+window.apiKey = window.__GOOGLE_MAPS_API_KEY__;
