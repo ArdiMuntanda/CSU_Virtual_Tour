@@ -43,6 +43,11 @@ html, body {
     cursor: pointer; 
     transition: .3s ease-in; 
 }
+.button.orange {
+    background-color: orangered;
+    border-radius: 30px;
+     
+}
 .button.orange_line {
     color: orangered; 
     border: 2px solid orangered; 

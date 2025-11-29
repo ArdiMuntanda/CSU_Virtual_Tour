@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>CSU - Virtual Tour</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/CSU_Virtual_Tour/assets/apple-touch-icon-CgquE4hN.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/CSU_Virtual_Tour/assets/favicon-32x32-Bgq1uCGC.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/CSU_Virtual_Tour/assets/favicon-16x16-BDmABuGf.png">
+    <link rel="manifest" href="/CSU_Virtual_Tour/assets/site-BXVcXOtt.webmanifest">
+    <link rel="mask-icon" href="/CSU_Virtual_Tour/assets/safari-pinned-tab-CAEZhY97.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="./scripts/jQuery.js" ></script>
+    <script src="./scripts/credits.js"></script>
+    
+    <script type="module" crossorigin src="/CSU_Virtual_Tour/assets/main-_kn0eTv2.js"></script>
+    <link rel="stylesheet" crossorigin href="/CSU_Virtual_Tour/assets/main-p4rZmomp.css">
+  </head>
+  <body>
+    <div id="starting_panel" >
+        <section class="starting_section" value="1">
+            <h1 class="title main">Welcome To Cyprus Science University</h1>
+            <p class="starting_description">Explore our campus and witness the vibrant world of scientific discovery. From laboratories to inspiring lecture halls, immerse yourself in our commitment to academic excellence. Discover the future of innovation as you navigate this captivating experience.</p>
+            <button class="button orange" id="start_btn">Start the Tour</button><br><br>
+            <button class="button credits">By the CSU Software Development Team</button>
+        </section>
+    </div>
+
+    <header class="left_menu">
+      <div class="left_menu_items">
+        <img src="data:image/png;base64,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" alt="">
+        <a href="https://www.csu.edu.tr/tr/www-kius-csu-edu-tr/">CSU Website</a>
+      </div>
+      <div class="left_menu_items">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAYAAADHl1ErAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIFSURBVHgB7dyBTYNAGMXxV9MBOsK5gSO0m7CBblDcoE5UNmg38BuhG+hdoIk19o4X7ppD3i/5UhMMwX/EnEBY4T7nZzt8LsnZjw2fo2z9HP18LXxOfhok7Cs40NpmD8WaHq2p9EBrmu3PYKfKD7aGOYZQKz8vQzBJc09Y3rJhit0a/W9YimEZXGr7Gmnm5xnL8IlEtCcIRcFICkZSMJKCkRSMpGCkMeuwMcL/WS6y/cPPIbLdDfsoyfzsMFGuYA7xYBuM20f1dEqSFIykYCQFIykYScFIuZYVYZ0VWzp0iLv4eUdZF2SQK9gB04QfpsUM6JQkKRhJwUgKRlIwkoKRcl7eibkgvQ5yKM8w0aMuIIZFaRvZ7tDfRC3JkOGGtE5JkoKRFIykYCQFIykYScFIudZhqRukqUWrYSYP7eUKZpjOMAM6JUkKRlIwkoKRFIykYKRcy4o3pG/kdpHtm2EfJYW14NT7p9mCvSJ9xbSLbAvB9ijLkCGYTkmSgpEUjKRgJAUjKRjpUZd3xjzMZijLkMGjLiCmGGZyAVGnJEnBSApGUjCSgpEUjKRgpDHrMIfyD7vVwqW+IQQzpDlIcA6nZAcZy65fhGdUa3mxWa1z8461bcUHWss0+KWt8CBrmRZ3tJUdaNWxrhroJZJhjuj/VN1Y4b7wqj+Hca/8+08M/crB/tr4DfXR70OnZY61AAAAAElFTkSuQmCC" alt="">
+        <a href="https://apply.csu.edu.tr/">Apply to CSU</a>
+      </div>
+      <div class="left_menu_items">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABSCAYAAADKMvPcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPtSURBVHgB7ZyBbdswEEV/ig6QES4bpBsoG2QEZYI6EyidoMkEZidoOoG8QbtB3AmaDVJdJAKGLUck7ySREh9wSGCIFP155KcpQkAaXDZByKjwtYl/Tbw0USITDDVRN/F2FL+Rs9ULHt4VToU8jgqZQQq0Q/vNMfjaW2RO4Kzcwl3I4+CyhMw71nTehLF60yL0m440VmdarqYjjQoroICf6WhMA4s0Lanp1JB1BN+bsBAkpsPlNgd1bQR1cYeUSBiCzHRq9GcVf2ZGqDdarOlIMqlwuE8J2TRQIQEKyL7kI9oOceWyKxN6P9fOmxz+Yt8hG4YFwiEsyLQ0TUdK0qZFGMd0NNplEF+7zjKV6UgpkYBpFZjWdKREa1pzm44UQkSmFZPpSJnVtAhxmo4UwsSmlYrpSCkxgWldIy3TkaJhWnSuct43DM3KGmlk5TkIskS67aswRMzYTEdKqGlxGTqs6GdAJTWW+eyGEGZa9WEFvvNGgeVTwn8aKLjgxqNAaqYjxde03qc/43BhjXVk5TkIbtm6/eRQ2WsTd03ssF72Tdyg1eJDXATltOfeqbBO7A+dFzhOdwZ+hrSmw1kF/IzJacgfQmiXWFss+7iLPUfA3kHwxMB/zWWztcTykOyucSeIdl44lnI4iyA/vOY95PuwGyoV0uTQdAooYCDrlZRNq4Du4TXndagrhDRMK9R0VNahz01coV3culKibWyJ+GDT4awsPcrs0C7sf7lcbODgXB0h21uxmBbB33SOtycNFFx+29OwoTJ9UWEeQk9M1zhNBIMRBLWU8J/Q+fopTatAWBuLM/UZjCgoE/pMhuskjEfoiemh7UmDkQW1EMIyoYQ+Ib90aritQQ0mEtQyp2kR5KYzhMHEgtovZuA/3CqEoWk6QxjMIKilxPimVUDXdIYwmFFQZizTGst0hjAO7R5VUAtBz7TGNJ0hDCIR1CIxLY7as6z2QQyDyARlCLo7XB9lJUEXM3BPlf1QX/Zoh/Id/DZcfOq/6WKPiZlDUItp4ksTT9Djqatzh5mYU1CG9xd5jvPdHjxmhzYjN/Dbv1VnbkEte7Si3sNPkNeuDIu5QwTEIqiF14k8ZH84XLvrrn1ERMQmKLPHx6bFn81mOkPEKKjF4NS0ZjedIT4jbqxp8bAmJHBgLXZBLXtEOLz7iHnIJ0kWVJksqDJZUGWyoMpkQZXJgiqTBVUmC6pMFlSZLKgyLr/lS+T3xzvDGTrrI4OF8ZcFfUZGi91F988LVvYi6BHYN3FlTekeGSnfjj94wPinOZYaDzjDQ2QNTVpMCyHspS5rixo9J/oucB4+R3nd/V3Te0aG+IPWgHqXm/8BezCgaehlcl4AAAAASUVORK5CYII=" alt="">
+        <a href="mailto:info@csu.edu.tr">Contact CSU</a>
+      </div>
+    </header>
+    <section id="guide_section">
+        <header class="csu_guide_top">
+            <section>
+              <div id="csu_logo">CSU</div>
+              <div id="guide_label">Cyprus Science University</div>
+            </section>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAYAAACOEfKtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPLSURBVHgB7ZyPUdswFMY/egyQDaoNoBNUnaB0AtIJ2g0QE9BOAExAN8DdgA2iDUgnoHrIaRMutuToj58U/e6+Sy5xEvuL9SQ/PfkE+1kYXRid9c8PYW302+gXjggy68ro2eglklZG33EECNiDfUmkBxx+NrOHDiyledsmVsVJ/3iDfM3sq9HdhO2l0Tnynb0Uu5+MOt8PCKQ/897GRF9uM+/bW9HvS9dOLmfYMQk3NzPs15iRYmhHf8ywQz7hgot5G61gQ8kOp3DHFo0J8aDnwvG9rt8U4IcwejT6BBsjXzn1+GAHG/inIBEW9NfgCR0TjSTIRE0vvANPyMAOPBGw8fkVrgYSdNZr8IRClKQnPk14LjRsU1FG75EvLgrP7b4ZdZwNJDTsMCsnAvZPu3RsJ40WnJvwXGjYP82VRaIO5bwZOIzPyEM0A4ehkYB2bNMMDKUZGEgzMJBmYCA+48B/o+4JCBwJZKDrwn2B+NngJ1QCNeE5DkajEshAGnHnTB89obIzkMy7Rj5+olIo25o6La5QFpTG9z6eTba1mfefSQZuWCLuJPsjpg+DuOA08GTkwxJhE9oaNi2vUS5koBh5/3psIN2B77wEG9qlXCDNwEA4zolsijtDWSPD9Cg3A1NUiWlsTYTHhlMTTlViJ2CHUknK47gYKJC2PlEg0fSoy8BF/+OpixvPkZ4zJGDMwCvYgSSJis6pGQikIUf16R8kYMhAikcKuwcmkTCWZCBJCm2fgRLD8UigzCUL95hWl+3NkIFjfEY5aNhc5xKJOGQcyK0JK+RNCO9Qw6Wcgu3wZqGWa2GFmUysKZmgMIOJtWVjFDKbWGM6SyGjiSUZOKWnVchkYkkGKjA0sbQmrMDMxBJjoAIjE0vtRBSYmFhyL6zAwMTShzEKM5vIxUBXrk6PvKcwo4mcDOxG3r/HOArTTZSIAKcmPLQ6k8xTcEPbTDHxEhHgNC+sYedvpdHH/jUyr4M/qn/0aaISEeA2sa5hU+93OBzVP7pM1IhArbUxCu7m7IqrXtRcXKQwbGK0Sabaq7OU0QfYlQibnp46qyUiwX3FegzIuC9IRKsPDKQZGEgzMJBmYCD7DNQYR6DiO1FuIeCuRlsfYiBxi/rxuRzcm0Wis8vnJrRkokB9TFnyhqGVSvQFvpXyGnUhPLe7w8i9ZSTSLTqsRRIOUq7cLF238EAgz62RS9MKE2I/Vc/HvKt56XrGASsK6AMrYNYd56AVApZjCNhep5SDja0HRBqySRyPkdRcH+DobcdWrLuQyHuL9lzoXnSV4bwdzF8doMv0lUWVawAAAABJRU5ErkJggg==" class="min_btn">
+        </header>
+        <nav class="guide_nav">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAyCAYAAAA9ZNlkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFKSURBVHgBxdk9DoJAEAXgtyb2HsUjaGHvkfRItmqCR/Ao9Ba4UBCRhf2ZN7OTGEnM5n1RhNkBUK7uhL1/Nd0Bu9DnGyhWH44OjT88YBtGOCjVGO4moW98cHQvtKqAhfAggg6IhM8QVEBi+ARBOwkzw/0C3GjfQEH41T1x6Q/FAEm4GCANFwEY4cUAVngRgBmeDWCHZwE0wpMBWuFJAM3wKEA7fBVgEb4IsAoPAizDZwDr8AmgRvgIqBU+AGqG95Xfkm08gVhlP4HDxd1xBaHKT0ISQvY3JCDkFyIhgnMpFiB4N6NCBPd2XIDgNySZCJ2WLAOh15QmInTb8gSE/sYkgrDZmq0g7DanCwjb7XkAYT+g+EPUGdH8IGhTslIEbUrmHn7s5nD0iDZpQYdz/0adFWcghhnhsAYKVXVUG0HYDKsXELNwk4o9sPgCodEXH+PAOD8AAAAASUVORK5CYII="  id="prev" value="" class="img_btn">
+            <h3 class="guide_title"></h3>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAyCAYAAAA9ZNlkAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFFSURBVHgBxdi7EYJAEIDhXWbsw1JMdAztQKxMrMACDGzBEizDyHN5DAry2GMft44GAv7fASYADEzYwTFs4QwppomH5m2OwH4cAhS9fQq8wQmsASNxcwQy4qYIpPiB4lfm/uqIjF4POg9P5v659o1ZX4I9rOENdzoTa+ZxamfiexMmQnT/hgkQ2P/CG4FDX3oicGyDFwKnNnogcG4Ha8QswBrBAlgi2AArRBTAAhEN0EYsAmgiFgO0ECKABkIMkCJUABJEBlrzKhVRR2D7IZ2woVWvaPXAXv2FVp+rACRxMUAaFwE04osBWvFFAM14NEA7HgWwiLMBVnEWwDI+C7COTwI84qMAr/ggwDP+B/COdwAp4i0gVbwCpIyXk1F8kypeTn0JttWPzj1+U4+3AAbCJN4BTCDM4oNTIn4e1xeQYhpEAQ7zAQEu82xDtXc1AAAAAElFTkSuQmCC" id="next" value="" class="img_btn">
+        </nav>
+        <article>
+
+    
+            <p class="guide_explanation">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus eligendi, temporibus culpa soluta ea vero recusandae. Quisquam autem asperiores voluptate mollitia, perferendis ipsa minus, quaerat repudiandae itaque facilis unde aliquam?</p>
+            
+        </article>
+        
+    </section>
+    <section class="locations-panel">
+      <header>
+        <div>Places</div>
+      </header>
+
+      <nav class="places_scroll left">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABvCAYAAABIBljcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ2SURBVHgB7ZxhjeMwFIQ/CAfhQVgIgbAMNgzuGCQMbhmkDA6CIRwEQ1gI2VpV/nSrNklfqvGTP2kAjCOP43FiWM9wlhGQ32fNZ+WzfhGINy7GFk0Ewbg8rflKfwjAf34aW9RRMSVA5jv6otKAWQLkkcqTrSpgjHXGFv2lEozbAfJIVQRMYruxRW8IM7Df2LLAG4L0PGdsUUIM4xLrs5OkAsbwNScXMB2+5spgSQVMGW1PgxmxBf6Er8GEEGWky4h7GgwfMB8I8Y6vObkdxIivwYxYwCR8Df5DiCMCZkAIwz9gOoTo8TUnFzCf+BrMBA+YCSGOCBipHUR52w8dMN47iPABI9eB3qvb90huB5HxNSgXMLOzwlcUhhBHBIwMJenCB0zrQDeodaCv5oSvwYQQrQPdoQ+EaB3oRmXEAqZ0lp4GWwf6Sgz/gHlHiB5fc60DfTUJX4MTQrQOdIc6hGgd6EZJdaCGr7kiifXviGAZEWHC11hChAFfYxmRMOnwn2eGAEbgBdzb2IgIpeTxNCZTuw/4GsuIzLOwR11G4ADxPv35RATvAMmIsPZvruoCxPA1VtQhgBF4oU74GpsQYcB/nknsqnv8jRkCGEGrciNwgIQ9nhrwn2cSARL2SNjwD5AeAVrXuEEJEQZ8jWWCdo1SAVJG2dOcRFUQOkBa17hSmdY1HovRusbVal3j0bSucYM6BDBa11hfgAz4z7OQVUExZojg/feU1Ge5BcMnTEZE6XjOmNSn8LfY++1jppKrIE9sM1bVJZ5bd909lWGsK1xHKqXjvrFE5YxUsFA/w/XxVLW3AN/iOmCquD92C8bliY0ERe6d8RHfxSLBmY9rCGEAAAAASUVORK5CYII=" alt="">
+      </nav>
+      <section class="location-box-section">
+        <article>
+        </article>
+      </section>
+      <nav class="places_scroll right">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADcAAABvCAYAAABIBljcAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ2SURBVHgB7ZxhjeMwFIQ/CAfhQVgIgbAMNgzuGCQMbhmkDA6CIRwEQ1gI2VpV/nSrNklfqvGTP2kAjCOP43FiWM9wlhGQ32fNZ+WzfhGINy7GFk0Ewbg8rflKfwjAf34aW9RRMSVA5jv6otKAWQLkkcqTrSpgjHXGFv2lEozbAfJIVQRMYruxRW8IM7Df2LLAG4L0PGdsUUIM4xLrs5OkAsbwNScXMB2+5spgSQVMGW1PgxmxBf6Er8GEEGWky4h7GgwfMB8I8Y6vObkdxIivwYxYwCR8Df5DiCMCZkAIwz9gOoTo8TUnFzCf+BrMBA+YCSGOCBipHUR52w8dMN47iPABI9eB3qvb90huB5HxNSgXMLOzwlcUhhBHBIwMJenCB0zrQDeodaCv5oSvwYQQrQPdoQ+EaB3oRmXEAqZ0lp4GWwf6Sgz/gHlHiB5fc60DfTUJX4MTQrQOdIc6hGgd6EZJdaCGr7kiifXviGAZEWHC11hChAFfYxmRMOnwn2eGAEbgBdzb2IgIpeTxNCZTuw/4GsuIzLOwR11G4ADxPv35RATvAMmIsPZvruoCxPA1VtQhgBF4oU74GpsQYcB/nknsqnv8jRkCGEGrciNwgIQ9nhrwn2cSARL2SNjwD5AeAVrXuEEJEQZ8jWWCdo1SAVJG2dOcRFUQOkBa17hSmdY1HovRusbVal3j0bSucYM6BDBa11hfgAz4z7OQVUExZojg/feU1Ge5BcMnTEZE6XjOmNSn8LfY++1jppKrIE9sM1bVJZ5bd909lWGsK1xHKqXjvrFE5YxUsFA/w/XxVLW3AN/iOmCquD92C8bliY0ERe6d8RHfxSLBmY9rCGEAAAAASUVORK5CYII=" >
+      </nav>
+    </section>
+    <nav class="mobile_places">
+      <header>
+        Places
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG8AAABkCAYAAACIAm6jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAASuSURBVHgB7Z2BUeM8EIW/Eq6ELYESVMLfAengpwOrg7sOoIMrISVcCS7hSuDQkXAhQCzb0mpl7zejYYYhSJZsvdj78gLb5dtLezj9dDpCXtr40p5PPwWnC/57ab95XbhzG0+/dwwz8H7RrtuAY46kaz+5vXDnlv5OcEwg/NO33OY6aIB7PupbbkuvO+A04TvLFs11sCFJ346UWbhzS/9PcKpyx3x9cx00wP8s17c57QGnKKX0zXVQEaG8vuW2X/g2upia+jZHB+9wZpH07dlQcx3MIN0GaOtbbvuO8yXCq85YXLjLbVRw3hHQuQ0otYAB5y/W9C23DeyYpG+P9LVg1+2RHdosBJ3bAK0+hJ0Q0NG3H6f+okJfIzuwWQzUn8jP6nQHdE6YgQ0yx6ZQawsTdLbRn2xIBwU7kya0P4m64R6d7Soyj6gwpq5tFhqPudIELX2jkF43KoxxoCNq2BRqbU2CzgIe6WAb1SrjPFHuTcG30//r4WSrRu82hQjVx15z/IvR0rdAXQI70kFBR980LQmCzgI2tVlo6Vt6zNXipvcH9Y9tpIHNQquM01ofIhs6Ti2bwoidgqfWDlPVZiHo2BQsWu4EnWMfqXDsAT19s4yWDgYKoaFv6TagF3tdGuezQhtYgZZNYaQ/Y6ugp4Oz32kLes/8eq19CQaf4QZ0bQq9E9FZwMnqyaAwkC1+nPhAQ5uFBZtC7wgNHANanR7ZvsdRUL4INCrKkX0RqTuf7yosQp0FXGNTKEGgHZ/FaBW96i5JW1rJJwifdqLEpYa3TDwSyl4UT0xIT9TopCLCxwlrfSI9sX5Os59ABZafMS0fc93z9VbV+hYlsnwHC8xEmLeAGjaFW+SWqgbaEZg3p6srLDk62LKMs8RqmP5eaIOQt4DFHAQPGp0sYE2hNL1OaMeti6K49Hw2US31rZTVsOUxRD6eUNUqLMLrFrlIRAtS2oox0I7zRXFEaSdoeRtQy47QUreFjaNhBKq6be0V7cSIXiwZpmmZiOSJRysQ2icijXji0WwCdhKRRjzxKBuriUgDzpf0kIj0iH+x1AeE9sGoc7ZRwflLoJ/Ev8sFbOkQMMFAX4t23QZ2iJbVUKNtKvFoCkHP33iH+1GLcU+bRKSo0OcWneBvtE5E8sSjBVhKRBI88Sgbi4lInniUgfVEpKgwtjXja0YviUgB18E3hP4SkYQdJB5N0Xsi0mYTj6bYSiJSBLZwHFloJiJpnbGbSDyaQthuIpLQceLRFIF9JEZ0l3g0xd4SkbpIPJpiz4lIguHEIyuDP2K3Nib0k1r/RsATkS6J6CzgapvFQP2B9lgHO2D4i6U8EWkaweAXSwmub7kIhk7ye2x+cZN1IvXn7Ka8DEoD2KrfsVbi0XUbLju1ZFPoHUHZZqHxBOGJ/XgbtWwWh3OHgXpnzF4/ZRqpM59pncJ1Z0LZBWydiGSBQNk5naywlHiSbrrkr4xQZgGzHQRrdLBlIpJl1lwUs6VnSUXZUxRuE5k3n2n+F1dYhLyKcuok4OSQe1EcKSQ9Ede3kgi3L4riFZa0Jf6u3cnOuNbBqg4C4fWSt2RT6J3zm8NV+paL4PlcpREWvEP/AxGNguEhvmPKAAAAAElFTkSuQmCC" alt="">
+      </header>
+      <article>
+
+      </article>
+    </nav>
+    <section class="right_btn">
+      <!-- <button id="vr-button" class="vr-button" title="Enter VR mode (Cardboard)">VR</button> -->
+      <div class="guide_btn">
+        <img src="/CSU_Virtual_Tour/images/unmuted guide.png" alt="">
+      </div>
+      <div class="music_btn">
+        <img src="/CSU_Virtual_Tour/images/unmute.png" alt="">
+      </div>
+    </section>
+    
+    <div id="pano"></div>
+    
+
+  <script src="./scripts/env-config.js"></script>
+  <script src="./scripts/config.js"></script>
+    <script defer>
+      // Load Google Maps JS dynamically and call initialize after it loads.
+      // `config.js` exposes `window.apiKey`.
+      (function () {
+        var key = (typeof window !== 'undefined') ? window.apiKey : null;
+        if (!key) {
+          console.error('Google Maps API key is not set (window.apiKey is falsy). Map will not load.');
+          return;
+        }
+
+        var script = document.createElement('script');
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&v=weekly';
+        script.async = true;
+        script.defer = true;
+        script.onload = function () {
+          if (typeof window.initialize === 'function') {
+            try { window.initialize(); } catch (e) { console.error('Error calling initialize():', e); }
+          } else {
+            console.warn('Google Maps API loaded but window.initialize is not defined yet.');
+          }
+        };
+        script.onerror = function (err) {
+          console.error('Failed to load Google Maps script:', err);
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+    
+  </body>
+</html>
