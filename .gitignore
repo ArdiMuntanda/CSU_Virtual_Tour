@@ -1,4 +1,5 @@
-config.js
+# Config files with API keys - only ignore root level
+/config.js
 js/config.js
 
 # Environment variables - CRITICAL - Do not commit!
@@ -7,3 +8,7 @@ js/config.js
 .env.*.local
 .env.production.local
 scripts/env-config.js
+
+# Allow public/scripts to be committed (needed for Vite build)
+!public/scripts/config.js
+!public/scripts/env-config.js
