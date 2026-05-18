@@ -6,11 +6,11 @@
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link rel="stylesheet" type="text/css" href="./css/vr.css" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -102,33 +102,65 @@
     <div id="pano"></div>
     
 
-  <script src="./scripts/env-config.js"></script>
-  <script src="./scripts/config.js"></script>
     <script defer>
+      function loadScriptWithFallback(paths) {
+        return new Promise(function (resolve, reject) {
+          var index = 0;
+
+          function tryNext() {
+            if (index >= paths.length) {
+              reject(new Error('Failed to load script from all paths: ' + paths.join(', ')));
+              return;
+            }
+
+            var script = document.createElement('script');
+            script.src = paths[index++];
+            script.async = false;
+            script.onload = function () { resolve(); };
+            script.onerror = function () {
+              script.remove();
+              tryNext();
+            };
+            document.head.appendChild(script);
+          }
+
+          tryNext();
+        });
+      }
+
       // Load Google Maps JS dynamically and call initialize after it loads.
       // `config.js` exposes `window.apiKey`.
       (function () {
-        var key = (typeof window !== 'undefined') ? window.apiKey : null;
-        if (!key) {
-          console.error('Google Maps API key is not set (window.apiKey is falsy). Map will not load.');
-          return;
-        }
+        loadScriptWithFallback(['./scripts/env-config.js', './public/scripts/env-config.js'])
+          .then(function () {
+            return loadScriptWithFallback(['./scripts/config.js', './public/scripts/config.js']);
+          })
+          .then(function () {
+            var key = (typeof window !== 'undefined') ? window.apiKey : null;
+            if (!key) {
+              console.error('Google Maps API key is not set (window.apiKey is falsy). Map will not load.');
+              return;
+            }
 
-        var script = document.createElement('script');
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&v=weekly';
-        script.async = true;
-        script.defer = true;
-        script.onload = function () {
-          if (typeof window.initialize === 'function') {
-            try { window.initialize(); } catch (e) { console.error('Error calling initialize():', e); }
-          } else {
-            console.warn('Google Maps API loaded but window.initialize is not defined yet.');
-          }
-        };
-        script.onerror = function (err) {
-          console.error('Failed to load Google Maps script:', err);
-        };
-        document.head.appendChild(script);
+            var script = document.createElement('script');
+            script.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(key) + '&v=weekly';
+            script.async = true;
+            script.defer = true;
+            script.onload = function () {
+              if (typeof window.initialize === 'function') {
+                try { window.initialize(); } catch (e) { console.error('Error calling initialize():', e); }
+              } else {
+                console.warn('Google Maps API loaded but window.initialize is not defined yet.');
+              }
+            };
+            script.onerror = function (err) {
+              console.error('Failed to load Google Maps script:', err);
+            };
+            document.head.appendChild(script);
+          })
+          .catch(function (err) {
+            console.error('Failed to load API config scripts:', err);
+          });
       })();
     </script>
     
